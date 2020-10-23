@@ -1,0 +1,91 @@
+
+export const DetailsData = [
+  {
+        "id": 1,
+        "name": "Already Contracted",
+        "lastModifiedOn": "28-Apr-2020 12:39 PM",
+        "lastModifiedBy": "Chris Jerrico",
+        "records": "0"
+    },
+    {
+      "id": 2,
+      "name": "Marketo Leads",
+      "lastModifiedOn": "25-Feb-2020 14:20 PM",
+      "lastModifiedBy": "Mark Henry",
+      "records": "7,800"
+  },
+  {
+    "id": 3,
+    "name": "Do Not Disturb",
+    "lastModifiedOn": "18-Apr-2020 04:30 PM",
+    "lastModifiedBy": "John Nick",
+    "records": "3,500"
+}, {
+  "id": 4,
+  "name": "Already Contracted",
+  "lastModifiedOn": "11-Apr-2020 04:34 PM",
+  "lastModifiedBy": "Dwen Samuel",
+  "records": "3,200"
+},
+{
+  "id": 5,
+  "name": "Already Contracted",
+  "lastModifiedOn": "11-Apr-2020 04:34 PM",
+  "lastModifiedBy": "Dwen Samuel",
+  "records": "3,200"
+},
+{
+  "id": 6,
+  "name": "Already Contracted",
+  "lastModifiedOn": "11-Apr-2020 04:34 PM",
+  "lastModifiedBy": "Dwen Samuel",
+  "records": "3,200"
+},
+{
+  "id": 7,
+  "name": "Already Contracted",
+  "lastModifiedOn": "11-Apr-2020 04:34 PM",
+  "lastModifiedBy": "Dwen Samuel",
+  "records": "3,200"
+},
+{
+  "id": 8,
+  "name": "Already Contracted",
+  "lastModifiedOn": "11-Apr-2020 04:34 PM",
+  "lastModifiedBy": "Dwen Samuel",
+  "records": "3,200"
+},{
+  "id": 9,
+  "name": "Already Contracted",
+  "lastModifiedOn": "11-Apr-2020 04:34 PM",
+  "lastModifiedBy": "Dwen Samuel",
+  "records": "3,200"
+},
+{
+  "id": 10,
+  "name": "Already Contracted",
+  "lastModifiedOn": "11-Apr-2020 04:34 PM",
+  "lastModifiedBy": "Dwen Samuel",
+  "records": "3,200"
+},
+{
+  "id": 11,
+  "name": "Already Contracted",
+  "lastModifiedOn": "11-Apr-2020 04:34 PM",
+  "lastModifiedBy": "Dwen Samuel",
+  "records": "3,200"
+},
+{
+  "id": 12,
+  "name": "Already Contracted",
+  "lastModifiedOn": "11-Apr-2020 04:34 PM",
+  "lastModifiedBy": "Dwen Samuel",
+  "records": "3,200"
+},{
+  "id": 13,
+  "name": "Already Contracted",
+  "lastModifiedOn": "11-Apr-2020 04:34 PM",
+  "lastModifiedBy": "Dwen Samuel",
+  "records": "3,200"
+}
+];

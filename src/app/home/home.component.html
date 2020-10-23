@@ -1,0 +1,136 @@
+<section id="tabs">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12 ">
+                <nav style="display: flex;">
+                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                            aria-controls="nav-home" aria-selected="false"><img class="img-height"
+                                src="assets/img/user-target.png" alt="Target Lists"> Target Lists</a>
+                        <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                            role="tab" aria-controls="nav-profile" aria-selected="true"> <img class="img-height"
+                                src="assets/img/user-sup.png" alt="Supression Lists"> Suppression Lists</a>
+                    </div>
+
+                </nav>
+                <hr class="mt0">
+                <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                    <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                       
+                    </div>
+                    <div class="tab-pane fade  show active" id="nav-profile" role="tabpanel"
+                        aria-labelledby="nav-profile-tab">
+                        <div class="fw600">
+                           <div class="row">
+                            <div class="col-sm-7">
+                                Total Suppression Records: <i class="fa fa-users ml mr"></i> <span class="text-warning">
+                                    15,500</span>
+                               </div>
+                               <div class="form-group has-search col-sm-3">
+                                <span class="fa fa-search form-control-feedback"></span>
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                                <!-- Example single danger button -->
+                                <div class="col-sm-2">
+                                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        Link Actions
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#"> <i class="far fa-file-alt mr"></i> Create Suppression List</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <img class="img-height mr"
+                                src="assets/img/email-plus.png" alt="Add Suppression Email">
+                                Add Suppression Email</a>
+                                    
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <img class="img-height mr"
+                                src="assets/img/email-remove.png" alt="Remove Suppression Email">
+                                Remove Suppression Email
+                                        </a>
+                                    </div>
+                                </div>
+                           </div>
+
+                        </div>
+                        
+                        <div>
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>Sr.No</th>
+                                    <th>Suppression List Name</th>
+                                    <th>Last Modified On</th>
+                                    <th>Last Modified By</th>
+                                    <th class=" text-center">Records</th>
+                                    <th>Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let data of products | paginate: { id: 'listing_pagination', itemsPerPage: 4, currentPage: page, totalItems : totalRecords }">
+                                    <td>{{data.id}}</td>
+                                    <td>{{data.name}}</td>
+                                    <td>{{data.lastModifiedOn}}</td>
+                                    <td>{{data.lastModifiedBy}}</td>
+                                    <td class="text-warning text-center">{{data.records}}</td>
+                                    <td>
+                                        <img class="img-height mr"
+                                src="assets/img/email-plus.png" alt="Add Suppression Email">
+                                     <i class="fa fa-pencil-alt mr ml"></i>
+                                     <i class="fa fa-trash-alt mr ml"></i>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <div class="text-center">
+                                <pagination-controls id="listing_pagination" maxSize="4" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+                              </div>
+                           </div>
+                           <div>
+                               <label> <b>Processing Queue</b></label>
+                               <a class="float-right" href="#">View Suppression List History</a>
+                           </div>
+                        <hr class="mt0">
+                        <div>
+                            <div *ngFor="let que of queueList">
+                                <span class="text-muted">{{ que.date}}</span>
+                                <hr class="mt mb">
+                                <div *ngFor="let deepQue of que.data">
+                                   <span class="fw600"> {{deepQue.heading}}</span>
+                                    
+                                    <div class="row">
+                                        <div class="col-2">
+                                        <span class="text-muted">Input Records</span> <br>   {{deepQue.inputRecords}}
+                                        <img *ngIf="deepQue.excel" class="img-height mr"
+                                        src="assets/img/excel.jpg" alt="Add Suppression Email">
+                                        </div>
+                                        <div class="col-2">
+                                            <span class="text-muted">Valid Records</span> <br>   {{deepQue.validRecords}}
+                                        </div>
+                                        <div class="col-2">
+                                            <span class="text-muted">Action</span> <br>    {{deepQue.action}}
+                                        </div>
+                                        <div class="col-2">
+                                            <span class="text-muted">By</span> <br>    {{deepQue.by}}
+                                        </div>
+                                        <div class="col-2">
+                                            <span class="text-muted">Lists</span> <br>    {{deepQue.lists}}
+                                        </div>
+                                        <div class="col-2">
+                                            <span class="fw600"> <i [ngClass]="deepQue.class" class="fs10 fas fa-circle"></i> {{deepQue.status}}</span>
+                                        </div>
+                                    </div>
+                                    <hr class="mt mb">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
